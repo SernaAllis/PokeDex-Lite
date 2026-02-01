@@ -6,7 +6,7 @@
       <div class="footer-brand">
         <div class="footer-logo">
           <span class="footer-icon">🎮</span>
-          <span class="footer-title">PokéDex</span>
+          <span class="footer-title">PokeDex</span>
         </div>
         <p class="footer-description">Explora el fascinante mundo de los Pokémon. Descubre información detallada de tus criaturas favoritas.</p>
       </div>
@@ -17,7 +17,6 @@
           <ul>
             <li><a href="/pokedex/public/">🏠 Inicio</a></li>
             <li><a href="/pokedex/public/?page=favorites">❤️ Favoritos</a></li>
-            <li><a href="/pokedex/public/?page=compare">🆚 Comparar</a></li>
           </ul>
         </div>
 
