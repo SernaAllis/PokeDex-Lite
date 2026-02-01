@@ -24,6 +24,14 @@ if ($view === 'favorites') {
 }
 
 /**
+ * 🆚 COMPARADOR (PRIORIDAD ALTA)
+ */
+if ($view === 'compare') {
+    require '../app/controllers/compareController.php';
+    exit;
+}
+
+/**
  * 📄 DETALLE (PRIORIDAD MÁXIMA)
  */
 if ($view === 'detail' && $name) {
