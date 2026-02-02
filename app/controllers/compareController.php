@@ -7,14 +7,12 @@ $pokemon1 = null;
 $pokemon2 = null;
 $error = null;
 
-// Obtener los IDs o nombres de los Pokémon a comparar
 $id1 = $_GET['id1'] ?? null;
 $id2 = $_GET['id2'] ?? null;
 
 if (!$id1 || !$id2) {
     $error = "Debes seleccionar dos Pokémon para comparar";
 } else {
-    // Obtener datos del primer Pokémon
     $url1 = "https://pokeapi.co/api/v2/pokemon/$id1";
     $data1 = CacheService::get($url1) ?? PokeApiService::get($url1);
     if ($data1) CacheService::set($url1, $data1);
@@ -34,7 +32,6 @@ if (!$id1 || !$id2) {
         $error = "No se encontró el primer Pokémon";
     }
 
-    // Obtener datos del segundo Pokémon
     $url2 = "https://pokeapi.co/api/v2/pokemon/$id2";
     $data2 = CacheService::get($url2) ?? PokeApiService::get($url2);
     if ($data2) CacheService::set($url2, $data2);

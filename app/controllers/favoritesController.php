@@ -6,9 +6,7 @@ require '../app/services/favoritesService.php';
 $action = $_GET['action'] ?? null;
 $id = isset($_GET['id']) ? (int) $_GET['id'] : null;
 
-/**
- * ⭐ AGREGAR / QUITAR
- */
+
 if ($action && $id) {
 
     if ($action === 'add') {
@@ -27,8 +25,6 @@ if ($action && $id) {
     exit;
 }
 
-/**
- * 📄 LISTAR FAVORITOS
- */
+
 $favorites = FavoritesService::all();
 require '../app/views/favorites.php';

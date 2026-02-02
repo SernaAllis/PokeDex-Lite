@@ -37,6 +37,12 @@
     </div>
   </div>
 
+  <?php if (isset($error)): ?>
+    <div class="error-message" style="padding: 20px; margin: 20px 0; background-color: #fee; border: 1px solid #fcc; border-radius: 5px; color: #c33; text-align: center;">
+      ⚠️ <?= htmlspecialchars($error) ?>
+    </div>
+  <?php endif; ?>
+
   <section class="pokemon-grid">
     <?php foreach ($results as $pokemon): ?>
       <?php

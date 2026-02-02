@@ -3,7 +3,6 @@ function toggleFavorite(name) {
     .then(() => location.reload());
 }
 
-// Comparador de Pokémon
 let selectedPokemon = [];
 let compareMode = false;
 
@@ -13,7 +12,6 @@ function startCompare() {
   document.getElementById('compareMode').style.display = 'block';
   document.getElementById('compareBtn').style.display = 'none';
   
-  // Mostrar checkboxes
   const checkboxes = document.querySelectorAll('.compare-checkbox');
   checkboxes.forEach(cb => cb.style.display = 'block');
   
@@ -26,7 +24,6 @@ function cancelCompare() {
   document.getElementById('compareMode').style.display = 'none';
   document.getElementById('compareBtn').style.display = 'inline-block';
   
-  // Ocultar y desmarcar checkboxes
   const checkboxes = document.querySelectorAll('.compare-checkbox');
   checkboxes.forEach(cb => {
     cb.style.display = 'none';
@@ -64,13 +61,11 @@ function submitCompare() {
   }
 }
 
-// Mobile menu toggle
 function toggleMobileMenu() {
   const nav = document.querySelector('.header-nav');
   nav.classList.toggle('mobile-open');
 }
 
-// Close mobile menu when clicking outside
 document.addEventListener('click', function(event) {
   const nav = document.querySelector('.header-nav');
   const toggle = document.querySelector('.mobile-menu-toggle');

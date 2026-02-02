@@ -15,25 +15,19 @@ $results = [];
 $count = 0;
 
 
-/**
- * ❤️ FAVORITOS (PRIORIDAD ALTA)
- */
+
 if ($view === 'favorites') {
     require '../app/controllers/favoritesController.php';
     exit;
 }
 
-/**
- * 🆚 COMPARADOR (PRIORIDAD ALTA)
- */
+
 if ($view === 'compare') {
     require '../app/controllers/compareController.php';
     exit;
 }
 
-/**
- * 📄 DETALLE (PRIORIDAD MÁXIMA)
- */
+
 if ($view === 'detail' && $name) {
     $url = "https://pokeapi.co/api/v2/pokemon/$name";
 
@@ -89,9 +83,7 @@ if ($name && $view === 'home') {
     exit;
 }
 
-/**
- * 🔥 FILTRO POR TIPO (DESPUÉS DEL DETALLE)
- */
+
 if ($type) {
     $url = "https://pokeapi.co/api/v2/type/$type";
 
@@ -106,9 +98,7 @@ if ($type) {
 
     $count = count($all);
 
-    /**
-     * 📃 LISTADO NORMAL
-     */
+
 } else {
     $url = "https://pokeapi.co/api/v2/pokemon?limit=$limit&offset=$offset";
 

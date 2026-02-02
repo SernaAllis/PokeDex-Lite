@@ -3,11 +3,9 @@
 require '../app/services/pokeApiService.php';
 require '../app/services/cacheService.php';
 
-// Leer parámetros
 $id   = $_GET['id']   ?? null;
 $name = $_GET['name'] ?? null;
 
-// Validar entrada
 $key = $id ?? $name;
 
 if (!$key) {
@@ -18,10 +16,8 @@ if (!$key) {
     exit;
 }
 
-// URL API
 $url = "https://pokeapi.co/api/v2/pokemon/$key";
 
-// Cache primero
 $data = CacheService::get($url);
 
 if (!$data) {
@@ -31,7 +27,6 @@ if (!$data) {
     }
 }
 
-// Manejo de error si no existe
 if (!$data) {
     http_response_code(404);
     echo json_encode([

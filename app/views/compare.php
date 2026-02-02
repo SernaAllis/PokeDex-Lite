@@ -11,7 +11,6 @@
     <h1>Comparador de Pokémon</h1>
     
     <div class="pokemon-comparison">
-      <!-- Pokémon 1 -->
       <div class="pokemon-card">
         <h2><?= ucfirst($pokemon1['name']) ?></h2>
         <img src="<?= $pokemon1['sprite'] ?>" alt="<?= $pokemon1['name'] ?>">
@@ -22,7 +21,6 @@
         </div>
       </div>
 
-      <!-- Tabla de comparación de stats -->
       <div class="stats-comparison">
         <table>
           <thead>
@@ -61,7 +59,6 @@
         </table>
       </div>
 
-      <!-- Pokémon 2 -->
       <div class="pokemon-card">
         <h2><?= ucfirst($pokemon2['name']) ?></h2>
         <img src="<?= $pokemon2['sprite'] ?>" alt="<?= $pokemon2['name'] ?>">
